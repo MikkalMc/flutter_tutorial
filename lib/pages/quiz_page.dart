@@ -16,7 +16,7 @@ class QuizPageState extends State<QuizPage> {
         new Column( //This is our main page
           children: <Widget>[
             new Expanded(
-              new Material( // True button
+              child: new Material( // True button
                 color: Colors.greenAccent,
                 child: new InkWell(
                 onTap: () => print("Yo answered true"),
@@ -27,7 +27,21 @@ class QuizPageState extends State<QuizPage> {
                   ),
                 )
               )
-            )
+            ),
+            new Expanded(
+              child: new Material( // True button
+                color: Colors.redAccent[100],
+                child: new InkWell(
+                onTap: () => print("False motha fucka"),
+                child: new Center(
+                   child: new Container(
+                    child: new Text("False")
+                     )
+                   ),
+                 )
+              )
+            ),
+
           ]
         ),
       ],
